@@ -6,7 +6,7 @@ filepath = r'./data/football.gml'
 
 G = nx.read_gml(filepath)
 k = 12
-sc_com = SpectralClustering.partition(G, k)  # 谱聚类
+sc_com = SpectralClustering.partition(G, k)
 print(sc_com)
 
 pos = nx.spring_layout(G)

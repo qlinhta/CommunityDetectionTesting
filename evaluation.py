@@ -11,7 +11,7 @@ def NMI(com, real_com):
     total = len(com)
     com_ids = set(com)
     real_com_ids = set(real_com)
-    #Mutual information
+
     MI = 0
     eps = 1.4e-45
     for id_com in com_ids:
@@ -23,7 +23,7 @@ def NMI(com, real_com):
             py = 1.0*len(idBOccur[0])/total
             pxy = 1.0*len(idABOccur)/total
             MI = MI + pxy*math.log(pxy/(px*py) + eps,2)
-    # Normalized Mutual information
+
     Hx = 0
     for idA in com_ids:
         idAOccurCount = 1.0*len(np.where(com == idA)[0])
